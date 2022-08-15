@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!--Favicon-->
+    <link rel="shortcut icon" href="IMG/razer.ico" type="image/x-icon">
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+    <title>Razer Page</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+          <div class="Logo">
+        <a href="index.htm"><img src="IMG/Razer.png" width="180"> </a>
+    </div>
+    <nav>
+        <ul class="lista-menu">
+           <li><a href="index.htm">Home</a></li>
+           <li><a href="index.htm">Sobre nós</a></li>
+           <li><a href="index.htm">Modelos</a></li>
+           <li><a href="index.htm">Contato</a></li>
+           <img class="close-icon" src="IMG/close-icon.png">
+
+        </ul>
+    </nav>
+    <button class="menu-icon"><img src="IMG/menu-icon.png"></button>
+  </header>
+  <main>
+    <section class="main_left">
+        <h1><b>Historia</b>& Qualidade </h1>
+        <p>
+            Criada em 2005 pela dupla Min-Liang Tan and Robert Krakoff, a Razer é uma empresa de fabricação de hardware e mundialmente conhecida por seus acessórios e periféricos voltados para gamers e jogadores profissionais de eSports, incluindo mouses, teclados, mousepads, headsets entre outros.
+        </p>
+    <div class="main_left-btn">
+        <button>Começar</button>
+        <button>Ver Mais</button>
+    </div>
+</section>
+
+    <section class="main_right">
+       <img src="IMG/viper.jpg" width="50%">
+    </section>
+
+  </main>
+</div>
+<script>
+    var menu = document.querySelector('nav');
+    var menuIcon = document.querySelector('.menu-icon');
+    var closeIcon = document.querySelector('.close-icon');
+         menuIcon.addEventListener(`click`,()=>{
+         menu.classList.add('active');
+});
+
+        closeIcon.addEventListener('click',()=>{
+          menu.classList.remove('active');
+
+});
+</script>
+    
+
+</body>
+  </script>
+</html>

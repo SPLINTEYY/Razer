@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif   ;
+    border: 0;
+    outline: 0;
+    
+}
+
+ body{
+    background: rgb(38,175,20);
+    background: linear-gradient(90deg, rgba(38,175,20,1) 0%, rgba(42,138,61,1) 32%, rgba(5,31,37,1) 100%);
+}  
+
+.container{
+    max-width: 1400px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 3%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header .menu-icon{
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+nav{
+    position: relative;
+}
+
+nav .lista-menu{
+    list-style: none;
+}
+
+nav .lista-menu .close-icon{
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: none;
+}
+
+nav.active .lista-menu{
+    transform: translate(0);
+}
+
+nav .lista-menu li{
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+}
+
+nav .lista-menu a
+{
+    color: white;
+    text-decoration: none;
+    transition: all, 0.5;
+}
+
+nav .lista-menu a:hover
+{
+    color: rgb(230, 191, 241);
+}
+
+main{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .main_left{
+       color: white;
+       width: 50%;
+       padding: 20px;
+}
+main .main_left h1{
+    color: rgb(255, 246, 246);
+    font-size: 5rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+main .main_left p{
+    font-size: 15px;
+    margin: 30px 0;
+}
+
+main .main_left-btn button{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 20px 35px rgb(0, 0, 10%),0 15px 12px rgb(0, 0, 0%);    
+}
+
+
+main .main_left-btn button:nth-child(1) {
+    background-color: rgb(28, 189, 28);
+    color: rgb(19, 6 42);
+    transition: all 0.5s;
+}
+
+main .main_left-btn button:nth-child(1):hover{
+    background-color: rgb(20, 112, 20);
+}
+
+main .main_left-btn button:nth-child(2) {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.5s;
+}
+
+main .main_left-btn button:nth-child(2):hover{
+    background-color: white;
+    color: rgb(4, 88, 8);
+}
+
+main .main_right{
+    position:relative;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+@media (max-width: 760px){
+    nav .lista-menu .close-icon,
+    header .menu-icon{
+        display: block;
+    }
+    nav .lista-menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s;
+        background-color: rgb(9, 63, 9);
+        background: rgba(0, 0, 0, 0.699);
+    }
+    nav .lista-menu li{
+        font-size: 30px;
+    }
+    
+    main{
+        flex-wrap: wrap;
+    }
+
+    main .main_left{
+        width: 100%;
+        text-align: center;
+        padding: 50px;
+    }
+    
+    main .main_left h1{
+        font-size: 3rem;
+    }
+    main .main_right{
+        width: 100%;
+        margin: 50px 10px;
+        display: none;
+    }
+}
+  
